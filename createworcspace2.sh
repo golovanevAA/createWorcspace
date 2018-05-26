@@ -43,9 +43,9 @@ if `mkdir -p ~/$1/src >nul 2>nul`
 			 										then
 			 											echo "Ok copy publisher.cpp"
 			 											cd ~/$1/src/my_service/
-			 											sed -i 's/collide/collide\n add_executable(server\ src\/subscriber.cpp)\n add_executable(client\ src\/publisher.cpp)/' CMakeLists.txt 
+			 											sed -i 's/collide/collide\n add_executable(server\ src\/subscriber.cpp)\n add_executable(client1\ src\/publisher.cpp)/' CMakeLists.txt 
 														sleep 2
-														sed -i 's/against/against\n target_link_libraries(client\ ${catkin_LIBRARIES})/' CMakeLists.txt
+														sed -i 's/against/against\n target_link_libraries(client1\ ${catkin_LIBRARIES})/' CMakeLists.txt
 														sleep 2
 														sed -i 's/against/against\n target_link_libraries(server\ ${catkin_LIBRARIES})/' CMakeLists.txt
 														sleep 2
