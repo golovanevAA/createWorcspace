@@ -1,4 +1,5 @@
-# Create work area proba 
+# Create work area proba
+cd ~ 
 if `mkdir -p ~/$1/src >nul 2>nul`
 	echo "Ok mkdir"
 	then
@@ -35,11 +36,13 @@ if `mkdir -p ~/$1/src >nul 2>nul`
 			 						then
 			 							echo "Ok catkin_make my_service"
 			 							source devel/setup.bash
-			 							cd ~
-			 							if `cp subscriber.cpp $1/src/my_service/src/subscriber.cpp >null 2>null`
+										cd ~
+										#cd rosStepik
+			 							cd createWorcspace
+			 							if `cp subscriber.cpp ~/$1/src/my_service/src/subscriber.cpp >null 2>null`
 			 								then
 			 									echo "Ok copy subscriber.cpp"
-			 									if `cp publisher.cpp $1/src/my_service/src/publisher.cpp >null 2>null`
+			 									if `cp publisher.cpp ~/$1/src/my_service/src/publisher.cpp >null 2>null`
 			 										then
 			 											echo "Ok copy publisher.cpp"
 			 											cd ~/$1/src/my_service/
