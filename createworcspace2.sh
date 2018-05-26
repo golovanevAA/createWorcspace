@@ -1,4 +1,4 @@
-# Create work area 
+# Create work area proba 
 if `mkdir -p ~/$1/src >nul 2>nul`
 	echo "Ok mkdir"
 	then
@@ -17,7 +17,7 @@ if `mkdir -p ~/$1/src >nul 2>nul`
 	 							cd my_service
 	 							mkdir srv/
 	 							cd srv
-	 							echo -e "int32 first\nint32 second\n---\nint32 sum" >> Addinst.srv
+	 							echo -e "string first\nstring second\n---\nstring sum" >> Addinst.srv
 	 							cd ..
 	 							sed -i '57,61 s/^#\ /\ /g' CMakeLists.txt
 								sleep 1
